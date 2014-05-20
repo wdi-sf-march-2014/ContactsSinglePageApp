@@ -1,6 +1,6 @@
 ## Single Page App Lab - Contacts
 
-The goal of this lab will be to make a single page contacts app that is connected to a rails backend.  The repo has a working front end contacts app that does not use a database.  Here is what you need to figure out:
+The goal of this lab will be to make a single page contacts app that is connected to a rails backend.  The repo has a working front end contacts app that does not use a database.  Here is what you need to get it work with rails:
 
 
 1. Look over the code in `app/assets/javascript/contacts.js` and understand what it is doing.
