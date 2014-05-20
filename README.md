@@ -15,7 +15,7 @@ If you get done with the contacts app early, add the ability to filter out the c
 
 ## Hint
 
-* Make sure you are requesting the correct data by add .json to your url.
+* Make sure you are requesting the correct data by adding .json to your url.
 * Look at the jQuery docs to understand what is going on.
 
 ### References
