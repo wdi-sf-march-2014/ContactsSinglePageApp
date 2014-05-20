@@ -9,6 +9,9 @@ The goal of this lab will be to make a single page contacts app that is connecte
 4. __TEST THE API WITH RSPEC__.  Make sure you do this before moving on.
 5. Use ajax in the javascript code to call the api you created and use the data that is returned in your contact app.
 
+## Bonus
+
+If you get done with the contacts app early, add the ability to filter out the contacts in the list.  There should be a list of letters A-Z.  When the user clicks a letter, A for example, all contacts that start with A are shown, but no other contacts.  The user should be able to clear the filtering as well.
 
 ## Hint
 
