@@ -1,3 +1,77 @@
-// Place all the styles related to the contacts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: 'Raleway', sans-serif;
+}
+h1 {
+  border-bottom: solid 1px #3498db;
+  
+  
+}
+header {
+  color: #3498db;
+  background-color: white;
+  position: float;
+  padding:1px;
+  width:100%;
+  margin-bottom:100px;
+}
+
+
+.contact-item {
+  padding-top: 20px;
+  padding-bottom:20px;
+  border-bottom: solid 1px #3498db;
+}
+.contact-img{ 
+  height:100px;
+}
+.contact-actions {
+  padding-top: 20px;
+  padding-bottom:20px;
+}
+.form-control:focus{
+    border-color: #cccccc;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-top: 22px;
+  padding-bottom:22px;
+}
+.form-control {
+  border-radius: 0px;
+  padding-top: 20px;
+  padding-bottom:20px;
+}
+.content {
+  color: white;
+  background-color:#95a5a6;
+}
+
+.btn:focus {
+    border-color: #cccccc;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn-action{
+  background-color: #3498db;
+}
+.btn-action:hover {
+  background-color: #ecf0f1;
+  color: #3498db;
+}
+.btn-whole {
+  position: inherit;
+  width: 100%;
+  border-radius:0px;
+  background-color:#3498db;
+  padding-top: 20px;
+  padding-bottom:20px;
+}
+.btn-whole:hover {
+  background-color: #ecf0f1;
+  color: #3498db;
+  padding-top: 20px;
+  padding-bottom:20px;
+}
+
+#contacts {
+  margin-top: 50px;
+}
