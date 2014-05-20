@@ -1,28 +1,10 @@
-== README
+## Single Page App Lab - Contacts
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The goal of this lab will be to make a single page contacts app that is connected to a rails backend.  The repo has a working front end contacts app that does not use a database.  Here is what you need to figure out:
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1. Look over the code in `app/assets/javascript/contacts.js` and understand what it is doing.
+2. Add a model to the rails app.  It should be able to store and retreive all of the contact data that is being used in the front end version of the contacts app.
+3. Create an api for getting all of the contacts.
+4. __TEST THE API WITH RSPEC__.  Make sure you do this before moving on.
+5. Use ajax in the javascript code to call the api you created and use the data that is returned in your contact app.
