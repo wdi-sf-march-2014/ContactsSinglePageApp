@@ -75,3 +75,7 @@ header {
 #contacts {
   margin-top: 50px;
 }
+
+#index {
+  float: right;
+}
