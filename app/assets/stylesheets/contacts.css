@@ -1,10 +1,11 @@
-body {
+
+
+html, body {
   font-family: 'Raleway', sans-serif;
+  height: 100%;
 }
 h1 {
   border-bottom: solid 1px #3498db;
-  
-  
 }
 header {
   color: #3498db;
@@ -12,17 +13,30 @@ header {
   position: float;
   padding:1px;
   width:100%;
-  margin-bottom:100px;
 }
 
+.layout-con{
+  height: 100%;
+}
+.layout-row {
+  height: 100%;
+}
+.layout-col {
+  margin-top:100px;
+}
 
 .contact-item {
   padding-top: 20px;
   padding-bottom:20px;
   border-bottom: solid 1px #3498db;
 }
+.contact-item-label {
+  padding-top: 20px;
+  padding-bottom:20px;
+}
 .contact-img{ 
   height:100px;
+  width: 100px;
 }
 .contact-actions {
   padding-top: 20px;
@@ -45,6 +59,11 @@ header {
   background-color:#95a5a6;
 }
 
+.btn {
+  border-radius: 0px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 .btn:focus {
     border-color: #cccccc;
     -webkit-box-shadow: none;
@@ -52,6 +71,9 @@ header {
 }
 .btn-action{
   background-color: #3498db;
+}
+.btn-attention {
+  background-color: red;
 }
 .btn-action:hover {
   background-color: #ecf0f1;
@@ -73,5 +95,24 @@ header {
 }
 
 #contacts {
-  margin-top: 50px;
+  height: 90%;
+  padding: 0px;
+  padding-top: 50px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-right: solid 1px #3498db;
 }
+
+.contact {
+  border-bottom: solid 20px #3498db;
+  margin-bottom: 20px;
+  background-color: #bdc3c7;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.contact-img {
+  margin-top:-50px;
+  border: solid 1px #3498db;
+  border-radius: 100px;
+}
+
