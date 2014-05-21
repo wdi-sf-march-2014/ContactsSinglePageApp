@@ -6,14 +6,80 @@ $(document).ready(function() {
     for (var char_code = 65; char_code < 91; char_code++) {
         var charStr = String.fromCharCode(char_code);
         var charSpan = "<span id='" + charStr + "' class='letter'> " + charStr + " </span>";
-        $("#letters").append(charSpan);
+        $("#letters").append(charSpan); // append to letters class
     };
 
     $("#letters").on("click", ".letter", function() {
         var id = this.id;
-        console.log(id)
         $(".contact").hide();
         $("." + id).show();
+    });
+
+    //new code is 
+
+    $('#new_contact').on('submit', function(event) {
+        //new_contact is the id
+        //submit is the action
+        event.preventDefault();
+        //stop it from submitting a regular old rails form
+        var form = $(this);
+        //this is #new_contact; this is a dom element object
+        var name = $('#contact_name').val();
+        //.val works in tandem with a form
+        var email = $('#contact_email').val();
+        var number = $('#contact_number').val();
+        var imgUrl = $('#contact_imgUrl').val();
+        //shortcute is $.post and $.get 
+        $.ajax({
+            url: form.attr('action'), // "/contacts"
+            method: form.attr('method'), //"post"
+            data: { //pass in key value pairs
+                "contact": {“
+                    name ": name, // key = params value 
+                    “email": email //“email" has to match params
+                    “ number”: number“ imgUrl ": imgUrl
+                }
+            },
+            dataType: "
+                    json ",
+            success: function(data) {
+                console.log(data); // good to show the data moving
+                var ul = $('ul') //create a new variable called ul; location of appending; could be body
+        var contact= [" < div id = '", newContact.id, "'
+                    class = 'contact " + newContact.name[0].toUpperCase() + "' > ",
+            " < div > ",
+            " < img src = ‘“,
+                    data.imgUrl,
+                    "' class='contact-img'>",
+                    "</div>",
+                    "<div class='contact-item'>",
+                    data.name,
+                    "</div>",
+                    "<div class='contact-item'>",
+                    data.email,
+                    "</div>",
+                    "<div class='contact-item'>",
+                    data.number,
+                    "</div>",
+
+                    "<div class='contact-actions'>",
+
+                    "<span class='delete btn btn-action'>Delete</span>",
+                    "</div>",
+                    "</div>"
+                    ].join("");
+                ul.append(contact); // same as contact.appendto(ul)
+                $(':text').val(''); // clears out the value
+                // $('#contact_name').val(“") only needed if all items aren’t text
+            },
+            error: function() {
+                alert("Server is broken!");
+                //responseText 
+                //var form = $('form')
+                //var message = "<p>+ data.responseText + "<p>"
+                //form.append(message);
+            }
+        });
     });
 
 
@@ -85,8 +151,9 @@ $(document).ready(function() {
     });
 
     $.get('/contacts.json').done(function(data) {
+
+        contacts = data;
         //stored the contact in the area
-        contacts = data
         $.each(contacts, function(index, item) {
             addContact(item);
 
